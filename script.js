@@ -88,7 +88,6 @@ $(document).ready(function() {
 	$("#submit-button").click(function() {
 		var text = $('textarea#text-area').val();
 		text = text.replace( /,/g, "" );
-		text = text.replace( /./g, "" );
 		text = text.replace( /'/g, "" );
 		text = text.replace( /"/g, "" );
 		text = text.replace( /!/g, "" );
@@ -112,7 +111,7 @@ $(document).ready(function() {
 		sortable.sort(function(a, b) {
 			return b[1] - a[1]
 		});
-		var time = Math.max(100, Number($('form#timeInterval').val()));
+		var time = $('form#timeInterval').val();
 		var inst = $('select#instrument').val();
 		var words = sortable.map(function(item) {
 			return item[0];
