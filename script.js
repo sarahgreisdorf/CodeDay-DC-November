@@ -105,7 +105,7 @@ $(document).ready(function() {
 		sortable.sort(function(a, b) {
 			return b[1] - a[1]
 		});
-		var time = $('form#timeInterval').val();
+		var time = Math.max(100, Number($('form#timeInterval').val()));
 		var inst = $('select#instrument').val();
 		var words = sortable.map(function(item) {
 			return item[0];
