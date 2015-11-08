@@ -1,9 +1,17 @@
+@font-face {
+ 
+    src: url(Archistico_Simple.ttf);
+}
+
 h1 {
 	margin-top: 50px;
+	font-family: Archistico;
+	font-size: 60px;
+	color: #F16521;
 }
 
 p {
-	color: blue;
+	color: #DADEDE;
 }
 
 textarea {
@@ -12,6 +20,7 @@ textarea {
 	margin-left: 20%;
 	margin-top: 50px;
 	padding: 10px;
+	background-color: #DADEDE;
 }
 
 .text-center {
@@ -30,3 +39,9 @@ button {
 form{
 
 }
+
+body
+{
+	background-color: #2C3340;
+}
+
