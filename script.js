@@ -105,7 +105,8 @@ $(document).ready(function() {
 		sortable.sort(function(a, b) {
 			return b[1] - a[1]
 		});
-		var time = Math.max(100, Number($('form#timeInterval').val()));
+		var time = Math.max(50, Number($('form#timeInterval').val()));
+		console.log(time)
 		var inst = $('select#instrument').val();
 		var words = sortable.map(function(item) {
 			return item[0];
@@ -124,7 +125,7 @@ $(document).ready(function() {
 					return;
 				}
 			}
-		},time)
+		}, time)
 
 		//		var cNote = new Audio('audio/piano-c.wav');
 		//		cNote.play();
