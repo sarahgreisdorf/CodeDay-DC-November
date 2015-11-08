@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Note.js</title>
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="script.js"></script> 
+		<script src="script.js"></script>
 	</head>
-
 	<body>
-
 		<h1 class="text-center">Note.js</h1>
-
-		<p class="text-center">Our project takes a document and uses the frequently used words to radomly generate music. Enter your document below to hear your song!</p>
-
-		 <textarea rows="4" cols="50" placeholder="Please copy and paste your text here"></textarea>
-
-		 <div class="text-center">
-		 	<button>Submit</button> 
-		 </div>
-
+		<p class="text-center">Our project takes text and uses the frequently used words to randomly generate music. Enter your text below to hear your song!</p>
+		<textarea rows="4" cols="50" id="text-area" placeholder="Please copy and paste your text here"></textarea>
+		
+		<div class="text-center">
+			<select id="instrument">
+				<option disabled selected>Select an Instument</option>
+				<option value="guitar">Guitar</option>
+				<option value="piano">Piano</option>
+			</select>
+			<button id="submit-button">Submit</button>
+			<form>
+				Time Interval:<br>
+				<input type="int" time="Time Interval">
+				<br>
+			</form>
+		</div>
 	</body>
 </html>

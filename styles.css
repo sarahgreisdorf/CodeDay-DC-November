@@ -14,8 +14,19 @@ textarea {
 	padding: 10px;
 }
 
-.text-center {text-align: center;}
+.text-center {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.dropdown {
+	text-align: center;
+}
 
 button {
 	
+}
+
+form{
+
 }
