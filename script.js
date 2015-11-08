@@ -105,9 +105,10 @@ $(document).ready(function() {
 		sortable.sort(function(a, b) {
 			return b[1] - a[1]
 		});
-		var time = Math.max(50, Number($('form#timeInterval').val()));
+		var time = Math.max(50, Number($('#time').val()));
 		console.log(time)
-		var inst = $('select#instrument').val();
+
+		var inst = $('select#instrument').val() || "piano";
 		var words = sortable.map(function(item) {
 			return item[0];
 		}).splice(0, notes[inst].length - 1)
@@ -118,7 +119,6 @@ $(document).ready(function() {
 				var word = textArray[i];
 				var index = words.indexOf(word);
 				if (index >= 0) {
-
 					var note = new Audio('audio/' + inst + '-' + notes[inst][index] + '.wav');
 					note.play();
 					i += 1;
