@@ -35,13 +35,8 @@ var notes = {
 		"18",
 		"19",
 		"20",
-		"21",
-		"22",
-		"23"
+		"21"
 	],
-	guitar2: [
-	
-	]
 }
 
 $(document).ready(function() {
@@ -66,6 +61,7 @@ $(document).ready(function() {
 		sortable.sort(function(a, b) {
 			return b[1] - a[1]
 		});
+		var time = $('form#timeInterval').val();
 		var inst = $('select#instrument').val();
 		var words = sortable.map(function(item) {
 			return item[0];
@@ -84,7 +80,7 @@ $(document).ready(function() {
 					return;
 				}
 			}
-		}, 200)
+		},time)
 
 		//		var cNote = new Audio('audio/piano-c.wav');
 		//		cNote.play();
