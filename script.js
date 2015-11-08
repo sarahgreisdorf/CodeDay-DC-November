@@ -87,6 +87,13 @@ $(document).ready(function() {
 
 	$("#submit-button").click(function() {
 		var text = $('textarea#text-area').val();
+		text = text.replace( /,/g, "" );
+		text = text.replace( /./g, "" );
+		text = text.replace( /'/g, "" );
+		text = text.replace( /"/g, "" );
+		text = text.replace( /!/g, "" );
+		text = text.replace( /:/g, "" );
+		text = text.replace( /;/g, "" );
 		var textArray = text.split(" ");
 		var wordCounts = {};
 
